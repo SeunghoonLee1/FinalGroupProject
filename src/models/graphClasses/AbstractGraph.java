@@ -7,7 +7,6 @@ import java.util.*;
  * Abstract base class for graphs. A graph is a set of vertices and a set of edges. Vertices are represented
  * by integers from 0 to n - 1. Edges are ordered pairs of vertices.
  *
- * 
  * @author Erik Anderson
  * @author Danny Lee
  * @author Reesha Rajen

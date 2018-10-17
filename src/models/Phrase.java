@@ -1,7 +1,6 @@
 package models;
 
 
-
 /**
  * Phrase.java : This class stores the String values that builds the phrase used for auto suggestion.
  * It also stores the weightTotal which is the sum of all the weights in edges between two words.

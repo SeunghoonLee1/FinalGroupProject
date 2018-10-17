@@ -389,7 +389,7 @@ public class AutoSuggestModel implements AutoInterface {
             autoSuggestModel.addToWordListSorted(sentence);
         }
 
-        autoSuggestModel.buildWordGraph("resources/google.txt");
+        autoSuggestModel.buildWordGraph("doc/constitution.txt");
         return autoSuggestModel;
     }
 
