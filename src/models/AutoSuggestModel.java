@@ -38,12 +38,12 @@ public class AutoSuggestModel implements AutoInterface {
     private ArrayList<String> uniqueWordList;
     //will contain all clean sentences in a given text file
     private LinkedList<String> sentenceList;
-    //will be a directed, weighted graph of words for a give text file
+    //will be a "directed, weighted" graph of words for a give text file
     private ListGraph wordGraph;
     //integer for total unique words within a text file
     private int numUniqueWords;
 
-    private static PriorityQueue<Phrase> queue; //TODO Reesha add documentation for these
+    private static PriorityQueue<Phrase> queue;
     private Comparator<Phrase> comparator;
 
     /**
@@ -66,7 +66,7 @@ public class AutoSuggestModel implements AutoInterface {
         buildSentenceList(inputFileName);
         wordGraph = new ListGraph(uniqueWordList.size(), true);
 
-        ListIterator<String> sentenceListIterator = sentenceList.listIterator();
+        ListIterator<String> sentenceListIterator = sentenceList.listIterator();  //list iterator that goes through the sentences in sentenceList
         String currentSentence;
         //iterate through sentence list
         while(sentenceListIterator.hasNext()){
@@ -77,7 +77,7 @@ public class AutoSuggestModel implements AutoInterface {
             int currentWordIndex;
             int nextWordIndex;
 
-            for(int i = 0; i < sentenceArray.length; i++ ){
+            for(int i = 0; i < sentenceArray.length; i++ ){ //for each sentence, add or update the words into wordGraph.
 
                 currentWord = sentenceArray[i];
 
@@ -219,15 +219,15 @@ public class AutoSuggestModel implements AutoInterface {
             }
             else{
 
-                int binarySearchPosition = binarySearch(currentWord);
+                int binarySearchPosition = binarySearch(currentWord);   //find which position in the uniqueWordList to add the current word
+                                                                        //through binarySearch of String.
 
                 if ( binarySearchPosition == uniqueWordList.size() ){ //if adding to end of list
 
                     uniqueWordList.add(currentWord);
                     numUniqueWords++;
 
-                }
-                else if( !uniqueWordList.get(binarySearchPosition).equals(currentWord)) { //if the word is not in the list
+                }else if( !uniqueWordList.get(binarySearchPosition).equals(currentWord)) { //if the word is not in the list
 
                     uniqueWordList.add(binarySearchPosition, currentWord);
                     numUniqueWords++;
@@ -339,7 +339,7 @@ public class AutoSuggestModel implements AutoInterface {
         /** Declare array[] parent and initialize its element to -1
          This array parent could be used to construct the breadth-first search tree.
          The element parent[v] contains the parent of vertex v in the tree. */
-        int[] parent = new int[graph.getNumV()];
+        int[] parent = new int[graph.getNumV()];    //size of parent array = number of vertices in the graph.
         for(int i = 0; i < graph.getNumV(); i++){
             parent[i] = -1;
         }
@@ -396,7 +396,7 @@ public class AutoSuggestModel implements AutoInterface {
     /**
      * This method takes in the last word that user typed as a parameter. Then it uses this word to do a breadth first
      * search to find the words that are adjacent to it. It finds the phrases that comes after the given word. Then it
-     * stores the phrases into a PriorityQueue which is in max-heap order. At the end, it polls the top-three weighted
+     * stores the phrases into a PriorityQueue which is in 'max-heap' order. At the end, it polls the top-three weighted
      * phrases and stores into a String array and returns the array.
      * @param word the last word user typed
      * @return phrases[] the array that stores phrases
@@ -423,9 +423,9 @@ public class AutoSuggestModel implements AutoInterface {
                 sourceWordIndex = autoSuggestModel.binarySearch(splitSentence[i]);
                 destWordIndex =  autoSuggestModel.binarySearch(splitSentence[i + 1]);
 
-                if(wordGraph.isEdge(sourceWordIndex, destWordIndex)){
+                if(wordGraph.isEdge(sourceWordIndex, destWordIndex)){   //if edge exists, increment weight.
                     wordGraph.getEdge(sourceWordIndex,destWordIndex).incrementWeight();
-                }else{
+                }else{                                                  //If edge does not exist, insert a new one to wordGraph
                     wordGraph.insert(new Edge(sourceWordIndex,destWordIndex));
                 }
             }

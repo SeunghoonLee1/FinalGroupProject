@@ -99,12 +99,9 @@ public class ListGraph extends AbstractGraph {
 
         if(edges[source].size() == 0){
             edges[source].add(new Edge(source, dest));
-
-
-        }
-        else{
+        }else{
             boolean addEdge = true;
-            ListIterator<Edge> listIterator = edges[source].listIterator();
+            ListIterator<Edge> listIterator = edges[source].listIterator();//Iterator for the list that goes through Edges.
             Edge tempEdge;
             while (listIterator.hasNext()){
 
@@ -117,12 +114,10 @@ public class ListGraph extends AbstractGraph {
                     addEdge = false;
                 }
             }
-            if(addEdge){
+            if(addEdge){    //When there is no corresponding existing Edge, add new one.
                 edges[source].add(new Edge(source, dest));
-
             }
         }
-
     }
 
 }

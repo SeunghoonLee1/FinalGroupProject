@@ -65,9 +65,9 @@ public abstract class AbstractGraph implements Graph {
             dest = scan.nextInt();
             if(scan.hasNextDouble()){
                 weight = scan.nextDouble();
-                Edge edge = new Edge(source, dest, weight);
+                Edge edge = new Edge(source, dest, weight); //If there is a third data value, build an Edge that has a weight.
             }else{
-                Edge edge = new Edge(source, dest);
+                Edge edge = new Edge(source, dest);//else build an Edge that only has source and dest values.
             }
             scan.nextLine();
         }
@@ -84,16 +84,16 @@ public abstract class AbstractGraph implements Graph {
      */
     public static Graph createGraph(Scanner scan, boolean isDirected, String type){
         int numV = scan.nextInt();
-        AbstractGraph returnValue = null;
+        AbstractGraph returnGraph = null;
         if(type.equalsIgnoreCase("Matrix")){
             //Stub out since we are not doing a matrix-version.
             //returnValue = new MatrixGraph(numV, isDirected);
         }else if(type.equalsIgnoreCase("List")){
-            returnValue = new ListGraph(numV, isDirected);
+            returnGraph = new ListGraph(numV, isDirected);
         }else{
             throw new IllegalArgumentException();
         }
-        return returnValue;
+        return returnGraph;
     }
 
 }
