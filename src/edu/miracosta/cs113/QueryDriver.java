@@ -15,6 +15,7 @@ import controllers.AutoSuggestController;
 
 public class QueryDriver {
     /*
+     *
      * Algorithm
      * 1. Build the word graph that is directed and weighted.
      * 2. Wait for user input.
