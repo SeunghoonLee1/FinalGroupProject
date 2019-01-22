@@ -47,6 +47,7 @@ public class Edge {
             return false;
         }
         Edge anotherEdge = (Edge)anObject;
+        //if the source and destination vertices are the same, treat the edges the equal.
         return(source == anotherEdge.getSource() && dest == anotherEdge.getDest());
     }
 

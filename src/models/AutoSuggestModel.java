@@ -38,12 +38,12 @@ public class AutoSuggestModel implements AutoInterface {
     private ArrayList<String> uniqueWordList;
     //will contain all clean sentences in a given text file
     private LinkedList<String> sentenceList;
-    //will be a "directed, weighted" graph of words for a give text file
-    private ListGraph wordGraph;
     //integer for total unique words within a text file
     private int numUniqueWords;
+    //will be a "directed, weighted" graph of words for a give text file
+    private ListGraph wordGraph;
 
-    private static PriorityQueue<Phrase> queue;
+    private static PriorityQueue<Phrase> queue; //stores 'Phrase's in priority queue.
     private Comparator<Phrase> comparator;
 
     /**
@@ -216,11 +216,11 @@ public class AutoSuggestModel implements AutoInterface {
 
                 uniqueWordList.add(currentWord);
                 numUniqueWords++;
-            }
-            else{
+            }else{
 
                 int binarySearchPosition = binarySearch(currentWord);   //find which position in the uniqueWordList to add the current word
                                                                         //through binarySearch of String.
+                                                                        // Q. but is the uniqueWordList sorted???
 
                 if ( binarySearchPosition == uniqueWordList.size() ){ //if adding to end of list
 
@@ -425,7 +425,7 @@ public class AutoSuggestModel implements AutoInterface {
 
                 if(wordGraph.isEdge(sourceWordIndex, destWordIndex)){   //if edge exists, increment weight.
                     wordGraph.getEdge(sourceWordIndex,destWordIndex).incrementWeight();
-                }else{                                                  //If edge does not exist, insert a new one to wordGraph
+                }else{                                                  //If edge does not exist, insert a new edge to wordGraph
                     wordGraph.insert(new Edge(sourceWordIndex,destWordIndex));
                 }
             }

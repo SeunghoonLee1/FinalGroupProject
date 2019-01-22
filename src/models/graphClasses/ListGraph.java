@@ -17,7 +17,7 @@ public class ListGraph extends AbstractGraph {
 
     //Data Field
     /** An array of Lists to contain the edges that originate with each vertex.*/
-    private List<Edge>[] edges;
+    private List<Edge>[] edges; // It is an adjacency list.
 
     //Constructor
     /**
@@ -98,6 +98,7 @@ public class ListGraph extends AbstractGraph {
     public void addOrUpdate(int source, int dest){
 
         if(edges[source].size() == 0){
+            //If there is no edge starting from the source, add new edge to it.
             edges[source].add(new Edge(source, dest));
         }else{
             boolean addEdge = true;
@@ -114,7 +115,7 @@ public class ListGraph extends AbstractGraph {
                     addEdge = false;
                 }
             }
-            if(addEdge){    //When there is no corresponding existing Edge, add new one.
+            if(addEdge){    //When there is no corresponding existing Edge(from source to dest), add new one.
                 edges[source].add(new Edge(source, dest));
             }
         }

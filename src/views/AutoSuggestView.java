@@ -352,9 +352,9 @@ public class AutoSuggestView extends JPanel implements KeyListener {
             this.buildGraph();
             String[] temps = model.generate(model, getWordLastTyped());
             this.concatDisplay("");
-            this.concatFirstDisplay(temps[0]);
-            this.concatSecondDisplay(temps[1]);
-            this.concatThirdDisplay(temps[2]);
+            this.concatFirstDisplay(temps[0]);  // Displays the most-weighted following word
+            this.concatSecondDisplay(temps[1]); // Displays the second-most weighted following word
+            this.concatThirdDisplay(temps[2]);  // Displays the third-most weighted following word
         }
         else {
             this.concatDisplay( "");
