@@ -51,7 +51,7 @@ public class ListGraph extends AbstractGraph {
     public void insert(Edge edge){
         edges[edge.getSource()].add(edge);
         System.out.println(edge);
-        //System.out.println();
+        //If it is undirected graph, add an edge that points back to the source from the destination vertex.
         if(!isDirected()){
             edges[edge.getDest()].add(new Edge(edge.getDest(), edge.getSource(), edge.getWeight()));
         }
