@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bf3d0d6-a01b-406f-8305-003110b4bc51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/models/AutoSuggestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AutoSuggestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/graphClasses/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/graphClasses/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/graphClasses/ListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/graphClasses/ListGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AutoSuggestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AutoSuggestView.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bf3d0d6-a01b-406f-8305-003110b4bc51" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +13,7 @@
     <session id="342048973">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="1" />
@@ -100,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/AutoSuggestView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="354" column="88" selection-start-line="354" selection-start-column="88" selection-end-line="354" selection-end-column="88" />
+            <state relative-caret-position="320">
+              <caret line="354" column="52" lean-forward="true" selection-start-line="354" selection-start-column="52" selection-end-line="354" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2875#2876#0" expanded="true" />
@@ -266,7 +261,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548143073507" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548143075614" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -327,7 +322,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16385542" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16385542" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -468,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/AutoSuggestView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="354" column="88" selection-start-line="354" selection-start-column="88" selection-end-line="354" selection-end-column="88" />
+        <state relative-caret-position="320">
+          <caret line="354" column="52" lean-forward="true" selection-start-line="354" selection-start-column="52" selection-end-line="354" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2875#2876#0" expanded="true" />
